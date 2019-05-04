@@ -13,4 +13,15 @@ if [[ ! -d .git ]]; then
   exit 0
 fi
 
+# list branches
+for file in "$PWD/.git/refs/remotes/origin/*"; do
+  echo $file
+done
+
+# find /data/ -type f -print0 | while read -d $'\0' file; do
+#     echo "Processing $file"
+# done
+
+# echo "$PWD"
+
 echo "$INFO: Done!"
